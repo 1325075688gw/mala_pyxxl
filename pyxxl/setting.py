@@ -44,7 +44,7 @@ class ExecutorConfig:
     """任务的默认超时时间,如果调度器传了以参数executorTimeout为准. Default: 60 * 10"""
     task_queue_length: int = 30
     """任务的队列长度.单机串行的队列长度,当阻塞的任务大于此值时会抛弃. Default: 30"""
-    graceful_close: bool = False
+    graceful_close: bool = True
     """是否优雅关闭. Default: True"""
     graceful_timeout: int = 60 * 5
     """优雅关闭的等待时间,超过改时间强制停止任务. Default: 60 * 5"""
